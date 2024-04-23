@@ -2,20 +2,20 @@
 
 We are a research team from the Faculty of Law at the University of Lucerne, Switzerland. Our project, the Choice of Law Dataverse, aims to enhance transparency and access to private international law data through innovative technological solutions.
 
-## Our Project
+## 🌍 Our Project
 The Choice of Law Dataverse project develops and maintains a web application that serves as a dynamic online platform for accessing and interacting with a vast repository of legal data. This platform is designed not only to facilitate the dissemination of legal information but also to foster a collaborative environment for scholars and practitioners in the field of private international law.
 
-## Our Technology
+## ⚙️ Our Technology
 A key component of our project is the integration of Large Language Models (LLMs) into our research processes. These advanced models assist in analyzing legal texts and predicting outcomes, which enhances our capabilities in data processing and interpretation.
 
-## Repository Naming Conventions
+## 💡 Repository Naming Conventions
 To maintain consistency and clarity across our GitHub organization, we follow specific naming conventions for our repositories:
 - **Project Prefix:** All repositories should start with the prefix cold- to clearly associate them with the Choice of Law Dataverse project.
 - **Component or Function:** Include a term that identifies the main component or function of the repository, such as web-app, interface, data-pipeline, postgresql, or chatbot.
 - **Optional Descriptor:** If further specificity is needed to clarify the repository’s purpose, append an additional descriptor that succinctly summarizes the repository's main focus or the aspect it deals with (e.g., cold-data-pipeline-validation, cold-postgresql-setup, cold-chatbot-ai).
 These conventions help collaborators and visitors navigate our projects and understand the purposes and contents at a glance.
 
-## Collaboration Guidelines
+## 📚 Collaboration Guidelines
 To collaborate on a project:
 
 - **Fork the Repository:** Start by forking the repository you are interested in contributing to.
