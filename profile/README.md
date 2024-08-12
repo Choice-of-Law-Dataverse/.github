@@ -25,6 +25,11 @@ To collaborate on a project:
 - **Pull Request:** Submit a pull request to the main branch for review.
 - **Code Review:** Participate in code review and respond to feedback.
 
+## Products and their Priority
+1. Semantic search, and with it some LLM capabilities
+2. Chatbot “helper”: Simple bot that helps user navigate the dataverse
+3. LLM case law analysis
+
 We encourage contributions that improve the quality and usability of our projects. Please ensure that your contributions align with our goals and standards.
 More Information
 
