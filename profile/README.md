@@ -27,7 +27,7 @@ To collaborate on a project:
 
 ## Products and their Priority
 1. Semantic search, and with it some LLM capabilities
-2. Chatbot “helper”: Simple bot that helps user navigate the dataverse
+2. Helper Chatbot: Simple bot that helps user navigate the dataverse
 3. LLM case law analysis
 
 We encourage contributions that improve the quality and usability of our projects. Please ensure that your contributions align with our goals and standards.
