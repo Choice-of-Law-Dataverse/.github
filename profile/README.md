@@ -15,6 +15,19 @@ To maintain consistency and clarity across our GitHub organization, we follow sp
 - **Optional Descriptor:** If further specificity is needed to clarify the repository’s purpose, append an additional descriptor that succinctly summarizes the repository's main focus or the aspect it deals with (e.g., cold-data-pipeline-validation, cold-postgresql-setup, cold-chatbot-ai).
 These conventions help collaborators and visitors navigate our projects and understand the purposes and contents at a glance.
 
+### Branch Naming Convention
+`category/reference/description`
+ 
+`category`: General type of branch, e.g. feature, fix, release, doc, …  
+`reference`: Reference to our Airtable Tasks System. "S" prefix for sprints, "T" prefix for tasks  
+`description`: Short but meaningful description of the branch, understandable even without Airtable reference  
+
+Example:  
+`feature/s36/dynamic-modals`  
+  
+[Source](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
+
+
 ## 👩‍💻 Collaboration Guidelines
 To collaborate on a project:
 
