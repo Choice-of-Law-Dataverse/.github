@@ -48,6 +48,9 @@ More Information
 
 For more details about the Choice of Law Dataverse and other associated initiatives, please visit our [project website](https://www.choiceoflawdataverse.com/).
 
+## ✍️ Language Style Guide
+To maintain a consistent tone, clarity, and structure across all project-related content, we follow a specific Language Style Guide.  
+You can find the detailed guide in the [cold-web-app README](https://github.com/Choice-of-Law-Dataverse/cold-web-app?tab=readme-ov-file#language-style-guide). Please review it before contributing any written content or user-facing text.
 
 
 
