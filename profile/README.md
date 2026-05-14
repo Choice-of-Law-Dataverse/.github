@@ -2,7 +2,7 @@
 
 Open-access knowledge base on choice of law in international contracts, developed at the [University of Lucerne](https://www.unilu.ch/en/). Winner of the [Swiss National ORD Prize 2025](https://ord.swiss-academies.ch/news/swiss-national-ord-prize-2025-for-legal-and-environmental-sciences).
 
-**[cold.global](https://cold.global)** | **[API docs](https://api.cold.global/docs)** | **[Tech Wiki](https://choice-of-law-dataverse.github.io/)**
+**[cold.global](https://cold.global)** | **[API docs](https://api.cold.global/api/v1/docs)** | **[Tech Wiki](https://choice-of-law-dataverse.github.io/)**
 
 ---
 
@@ -60,8 +60,6 @@ Full interactive documentation: [api.cold.global/docs](https://api.cold.global/d
 | Repository | Description |
 |---|---|
 | [**cold-web-app**](https://github.com/Choice-of-Law-Dataverse/cold-web-app) | Nuxt 4 frontend + FastAPI backend powering [cold.global](https://cold.global) |
-| [**cold-case-analysis**](https://github.com/Choice-of-Law-Dataverse/cold-case-analysis) | LLM-powered analysis of court decisions for choice-of-law extraction |
-| [**cold-case-analysis-heidelberg**](https://github.com/Choice-of-Law-Dataverse/cold-case-analysis-heidelberg) | Collaborative case analysis variant with Heidelberg |
 | [**Choice-of-Law-Dataverse.github.io**](https://github.com/Choice-of-Law-Dataverse/Choice-of-Law-Dataverse.github.io) | Technical documentation and architecture wiki |
 
 ## Contributing
@@ -73,7 +71,7 @@ We welcome contributions that improve the quality and usability of our projects.
 3. Commit using [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): description`.
 4. Open a pull request against `main` for review.
 
-For data contributions (country reports, specialist reviews), see [cold.global/supporters](https://cold.global/supporters).
+For data contributions (country reports, specialist reviews), see [cold.global/contact](https://cold.global/contact).
 
 ## Learn more
 
