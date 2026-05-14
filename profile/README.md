@@ -1,84 +1,93 @@
-# Welcome to the Choice of Law Dataverse GitHub Organization
+# Choice of Law Dataverse (CoLD)
 
-We are a research team from the Faculty of Law at the University of Lucerne, Switzerland. Our project, the Choice of Law Dataverse, aims to enhance transparency and access to private international law data through innovative technological solutions.
+Open-access knowledge base on choice of law in international contracts, developed at the [University of Lucerne](https://www.unilu.ch/en/). Winner of the [Swiss National ORD Prize 2025](https://ord.swiss-academies.ch/news/swiss-national-ord-prize-2025-for-legal-and-environmental-sciences).
 
-## 🌍 Our Project
-The Choice of Law Dataverse project develops and maintains a web application that serves as a dynamic online platform for accessing and interacting with a vast repository of legal data. This platform is designed not only to facilitate the dissemination of legal information but also to foster a collaborative environment for scholars and practitioners in the field of private international law.
+**[cold.global](https://cold.global)** | **[API docs](https://api.cold.global/docs)** | **[Tech Wiki](https://choice-of-law-dataverse.github.io/)**
 
-## ⚙️ Our Technology
-A key component of our project is the integration of Large Language Models (LLMs) into our research processes. These advanced models assist in analyzing legal texts and predicting outcomes, which enhances our capabilities in data processing and interpretation.
+---
 
-## 💡 Repository Naming Conventions
-To maintain consistency and clarity across our GitHub organization, we follow specific naming conventions for our repositories:
-- **Project Prefix:** All repositories should start with the prefix cold- to clearly associate them with the Choice of Law Dataverse project.
-- **Component or Function:** Include a term that identifies the main component or function of the repository, such as web-app, interface, data-pipeline, postgresql, or chatbot.
-- **Optional Descriptor:** If further specificity is needed to clarify the repository’s purpose, append an additional descriptor that succinctly summarizes the repository's main focus or the aspect it deals with (e.g., cold-data-pipeline-validation, cold-postgresql-setup, cold-chatbot-ai).
-These conventions help collaborators and visitors navigate our projects and understand the purposes and contents at a glance.
+## What is CoLD?
 
-### Branch Naming Convention
-`category/reference/description`
- 
-`category`: General type of branch, e.g. feature, fix, release, doc, …  
-`reference`: Reference to our Airtable Tasks System. "S" prefix for sprints, "T" prefix for tasks  
-`description`: Short but meaningful description of the branch, understandable even without Airtable reference  
+CoLD is a curated repository of private international law data covering **63+ jurisdictions** worldwide. It helps researchers, practitioners, and students explore choice-of-law rules across legal systems through structured, comparable data.
 
-Example:  
-`feature/s36/dynamic-modals`  
-  
-[Source](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
+- **Repository** — carefully curated private international law data, kept up to date as legal systems evolve.
+- **Community** — a network of specialists, researchers, and practitioners who transform data points into knowledge.
+- **Open Research** — all data licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), promoting sharing, citing, exploring, and analyzing research data on choice of law.
 
+## Available datasets
 
-## 👩‍💻 Collaboration Guidelines
-To collaborate on a project:
+| Dataset | Description |
+|---|---|
+| **Answers** | Country-level responses to the CoLD standardised questionnaire on choice-of-law rules |
+| **HCCH Answers** | Answers mapped to the HCCH Principles on Choice of Law |
+| **Questions** | The standardised questionnaire items that Answers respond to |
+| **Court Decisions** | Case law with metadata, themes, PIL provisions, and jurisdiction links |
+| **Domestic Instruments** | National statutes, codes, and PIL regulations |
+| **Domestic Legal Provisions** | Individual articles/provisions within domestic instruments |
+| **Regional Instruments** | Supranational instruments (e.g. EU Rome I Regulation) |
+| **Regional Legal Provisions** | Individual articles/provisions within regional instruments |
+| **International Instruments** | Treaties, conventions, and model laws (e.g. HCCH Principles) |
+| **International Legal Provisions** | Individual articles/provisions within international instruments |
+| **Literature** | Academic and practitioner publications on choice of law |
+| **Arbitral Awards** | Published arbitral awards with choice-of-law analysis |
+| **Arbitral Rules** | Institutional arbitration rules (e.g. ICC, LCIA) |
+| **Arbitral Provisions** | Individual articles within arbitral rules |
+| **Arbitral Institutions** | Arbitration institutions (e.g. ICC, SIAC) |
+| **Jurisdictions** | Countries and territories with metadata (region, legal family) |
+| **Specialists** | Choice-of-law experts by jurisdiction |
 
-- **Fork the Repository:** Start by forking the repository you are interested in contributing to.
-- **Clone Your Fork:** Work locally on your own machine by cloning your fork.
-- **Create a Branch:** Make a new branch for each feature or improvement.
-- **Commit Changes:** Make your changes and commit them with clear, concise messages.
-- **Pull Request:** Submit a pull request to the main branch for review.
-- **Code Review:** Participate in code review and respond to feedback.
+Bulk CSV and XLSX exports are available at [cold.global/data-sets](https://cold.global/data-sets).
 
-## Products and their Priority
-1. Semantic search, and with it some LLM capabilities
-2. Helper Chatbot: Simple bot that helps user navigate the dataverse
-3. LLM case law analysis
+## Open API
 
-We encourage contributions that improve the quality and usability of our projects. Please ensure that your contributions align with our goals and standards.
-More Information
+Read-only data endpoints are **publicly accessible** — no API key or token required.
 
-For more details about the Choice of Law Dataverse and other associated initiatives, please visit our [project website](https://www.choiceoflawdataverse.com/).
+```bash
+# Search across all datasets
+curl "https://api.cold.global/api/v1/search/?search_string=party+autonomy"
 
-## ✍️ Language Style Guide
-To maintain a consistent tone, clarity, and structure across all project-related content, we follow a specific Language Style Guide.  
-You can find the detailed guide in the [cold-web-app README](https://github.com/Choice-of-Law-Dataverse/cold-web-app?tab=readme-ov-file#language-style-guide). Please review it before contributing any written content or user-facing text.
+# Export an entire table
+curl "https://api.cold.global/api/v1/search/full_table?table=Court+Decisions"
 
+# Fetch a single record with related entities
+curl "https://api.cold.global/api/v1/search/details?table=Court+Decisions&id=CD-CHE-42"
+```
 
+Full interactive documentation: [api.cold.global/docs](https://api.cold.global/docs)
 
+## Repositories
 
-<!--
+| Repository | Description |
+|---|---|
+| [**cold-web-app**](https://github.com/Choice-of-Law-Dataverse/cold-web-app) | Nuxt 4 frontend + FastAPI backend powering [cold.global](https://cold.global) |
+| [**cold-case-analysis**](https://github.com/Choice-of-Law-Dataverse/cold-case-analysis) | LLM-powered analysis of court decisions for choice-of-law extraction |
+| [**cold-case-analysis-heidelberg**](https://github.com/Choice-of-Law-Dataverse/cold-case-analysis-heidelberg) | Collaborative case analysis variant with Heidelberg |
+| [**Choice-of-Law-Dataverse.github.io**](https://github.com/Choice-of-Law-Dataverse/Choice-of-Law-Dataverse.github.io) | Technical documentation and architecture wiki |
 
-**Here are some ideas to get you started:**
+## Contributing
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+We welcome contributions that improve the quality and usability of our projects.
 
+1. Fork the repository and clone your fork locally.
+2. Create a feature branch: `feature/short-description`.
+3. Commit using [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): description`.
+4. Open a pull request against `main` for review.
 
-**Useful Emojis
-Using emojis can make your GitHub README more engaging and visually appealing. Here are some relevant emojis you might consider incorporating:
+For data contributions (country reports, specialist reviews), see [cold.global/supporters](https://cold.global/supporters).
 
-    📚 for documentation or educational content
-    🌐 for web-related projects (like web apps)
-    ⚙️ for tools and utilities
-    📊 for data-related content (like pipelines)
-    💡 for innovative features or ideas
-    🤖 for bots and AI-related content
-    🌍 for international law or global impact
-    🔍 for research and exploration
-    📈 for analytics or growth-related content
-    ✅ for completed tasks or features
+## Learn more
 
-You can sprinkle these emojis throughout your README to emphasize sections and make the document friendlier and more accessible.
--->
+- [Glossary](https://cold.global/learn/glossary) — key private international law terms (party autonomy, depeçage, mandatory rules, etc.)
+- [Methodology](https://cold.global/learn/methodology) — how the CoLD questionnaire is structured and data is collected
+- [FAQ](https://cold.global/learn/faq) — common questions about choice of law and the Dataverse
+- [Open Educational Resources](https://cold.global/learn/open-educational-resources) — curated readings and publications
+
+## Contact
+
+**Choice of Law Dataverse — University of Lucerne**
+Inseliquai 8, Room INS-1, 6005 Luzern, Switzerland
+[mail@cold.global](mailto:mail@cold.global) | [LinkedIn](https://www.linkedin.com/company/choice-of-law-dataverse/) | [Newsletter](https://choiceoflawdataverse.substack.com/)
+
+---
+
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). An [SNF-funded](https://www.snf.ch/) project at the University of Lucerne.
